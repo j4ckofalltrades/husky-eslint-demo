@@ -1,0 +1,38 @@
+{
+  "name": "husky-eslint-demo",
+  "version": "1.0.0",
+  "description": "Template repository for a JavaScript project that enforces code style with husky, lint-staged, eslint, and prettier.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j4ckofalltrades/husky-eslint-demo.git"
+  },
+  "author": "Jordan Duabe",
+  "license": "CC BY-SA",
+  "bugs": {
+    "url": "https://github.com/j4ckofalltrades/husky-eslint-demo/issues"
+  },
+  "homepage": "https://github.com/j4ckofalltrades/husky-eslint-demo#readme",
+  "devDependencies": {
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3"
+  },
+  "lint-staged": {
+    "!(*.js)": [
+      "prettier --write src"
+    ],
+    "*.js": [
+      "eslint --fix src",
+      "prettier --write src"
+    ]
+  }
+}
