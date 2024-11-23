@@ -19,6 +19,7 @@ export default [
       "linebreak-style": ["error", "unix"],
       quotes: ["error", "double"],
       semi: ["error", "never"],
+      "no-var": ["error"],
     },
   },
 ]
